@@ -1,0 +1,14 @@
+{% extends 'layouts/index.html' %}
+
+
+{% block content %}
+    <div class="form-box" style="margin-left: 37%; margin-top: 10ex">
+        <div class="form">
+            <form action="/products/create/" enctype="multipart/form-data"  method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Создать">
+            </form>
+        </div>
+    </div>
+{% endblock %}
